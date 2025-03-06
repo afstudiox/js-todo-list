@@ -28,23 +28,23 @@ Será necessário demonstrar conhecimento em estruturação semântica, estiliza
 
 - [x] - Adicione um botão com id="criar-tarefa" e, ao clicar nesse botão, um novo item deverá ser criado ao final da lista e o texto do input deve ser limpo
 
-- [] - Ordene os itens da lista de tarefas por ordem de criação
+- [ ] - Ordene os itens da lista de tarefas por ordem de criação
 
-- [] - Clicar em um item da lista deve alterar a cor de fundo do item para cinza rgb(128,128,128)
+- [ ] - Clicar em um item da lista deve alterar a cor de fundo do item para cinza rgb(128,128,128)
 
-[] Não deve ser possível selecionar mais de um elemento da lista ao mesmo tempo
+- [ ] - Não deve ser possível selecionar mais de um elemento da lista ao mesmo tempo
 
-[] Clicar duas vezes em um item, faz com que ele seja riscado, indicando que foi completo. Deve ser possível desfazer essa ação clicando novamente duas vezes no item
+- [ ] - Clicar duas vezes em um item, faz com que ele seja riscado, indicando que foi completo. Deve ser possível desfazer essa ação clicando novamente duas vezes no item
 
-[] Adicione um botão com id="apaga-tudo" que quando clicado deve apagar todos os itens da lista
+- [ ] - Adicione um botão com id="apaga-tudo" que quando clicado deve apagar todos os itens da lista
 
-[] Adicione um botão com id="remover-finalizados" que quando clicado remove somente os elementos finalizados da sua lista
+- [ ] - Adicione um botão com id="remover-finalizados" que quando clicado remove somente os elementos finalizados da sua lista
 
-[] Adicione um botão com id="salvar-tarefas" que salve o conteúdo da lista. Se você fechar e reabrir a página, a lista deve continuar no estado em que estava
+- [ ] - Adicione um botão com id="salvar-tarefas" que salve o conteúdo da lista. Se você fechar e reabrir a página, a lista deve continuar no estado em que estava
 
-[] Adicione dois botões, um com id="mover-cima" e outro com id="mover-baixo", que permitam mover o item selecionado para cima ou para baixo na lista de tarefas
+- [ ] - Adicione dois botões, um com id="mover-cima" e outro com id="mover-baixo", que permitam mover o item selecionado para cima ou para baixo na lista de tarefas
 
-[] Adicione um botão com id="remover-selecionado" que, quando clicado, remove o item selecionado
+- [ ] - Adicione um botão com id="remover-selecionado" que, quando clicado, remove o item selecionado
 
 
 **Nota:** A estrutura deste repositório foi desenvolvida pela [Trybe](https://www.betrybe.com/).
