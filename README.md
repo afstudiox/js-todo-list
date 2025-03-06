@@ -30,9 +30,9 @@ Será necessário demonstrar conhecimento em estruturação semântica, estiliza
 
 - [x] - Ordene os itens da lista de tarefas por ordem de criação
 
-- [ ] - Clicar em um item da lista deve alterar a cor de fundo do item para cinza rgb(128,128,128)
+- [x] - Clicar em um item da lista deve alterar a cor de fundo do item para cinza rgb(128,128,128)
 
-- [ ] - Não deve ser possível selecionar mais de um elemento da lista ao mesmo tempo
+- [x] - Não deve ser possível selecionar mais de um elemento da lista ao mesmo tempo
 
 - [ ] - Clicar duas vezes em um item, faz com que ele seja riscado, indicando que foi completo. Deve ser possível desfazer essa ação clicando novamente duas vezes no item
 
