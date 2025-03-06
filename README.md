@@ -18,7 +18,7 @@ Será necessário demonstrar conhecimento em estruturação semântica, estiliza
 
 ## :trophy: Desafios
 
-[x] Adicione à sua lista o título "Minha Lista de Tarefas" em uma tag semanticamente compatível.
+- [x]  - Adicione à sua lista o título "Minha Lista de Tarefas" em uma tag semanticamente compatível.
 
 [x] Adicione abaixo do título um pequeno e discreto parágrafo com id="funcionamento" e com o texto "Clique duas vezes em um item para marcá-lo como completo"
 
