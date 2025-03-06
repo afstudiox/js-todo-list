@@ -20,17 +20,17 @@ Será necessário demonstrar conhecimento em estruturação semântica, estiliza
 
 - [x]  - Adicione à sua lista o título "Minha Lista de Tarefas" em uma tag semanticamente compatível.
 
-[x] Adicione abaixo do título um pequeno e discreto parágrafo com id="funcionamento" e com o texto "Clique duas vezes em um item para marcá-lo como completo"
+- [x] - Adicione abaixo do título um pequeno e discreto parágrafo com id="funcionamento" e com o texto "Clique duas vezes em um item para marcá-lo como completo"
 
-[x] Adicione um input com o id="texto-tarefa" onde a pessoa usuária poderá digitar o nome do item que deseja adicionar à lista
+- [x] -  Adicione um input com o id="texto-tarefa" onde a pessoa usuária poderá digitar o nome do item que deseja adicionar à lista
 
-[x] Adicione uma lista ordenada de tarefas com o id="lista-tarefas"
+- [x] - Adicione uma lista ordenada de tarefas com o id="lista-tarefas"
 
-[x] Adicione um botão com id="criar-tarefa" e, ao clicar nesse botão, um novo item deverá ser criado ao final da lista e o texto do input deve ser limpo
+- [x] - Adicione um botão com id="criar-tarefa" e, ao clicar nesse botão, um novo item deverá ser criado ao final da lista e o texto do input deve ser limpo
 
-[] Ordene os itens da lista de tarefas por ordem de criação
+- [] - Ordene os itens da lista de tarefas por ordem de criação
 
-[] Clicar em um item da lista deve alterar a cor de fundo do item para cinza rgb(128,128,128)
+- [] - Clicar em um item da lista deve alterar a cor de fundo do item para cinza rgb(128,128,128)
 
 [] Não deve ser possível selecionar mais de um elemento da lista ao mesmo tempo
 
