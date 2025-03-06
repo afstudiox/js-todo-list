@@ -14,6 +14,11 @@ criarTarefaButton.addEventListener('click', function() {
     const novaTarefa = document.createElement('li');
     novaTarefa.textContent = textoTarefa;
     novaTarefa.addEventListener('click', function(){
+
+      document.querySelectorAll('li').forEach(li => {
+        li.classList.remove('bg-color-grey');
+      });
+
       novaTarefa.classList.toggle('bg-color-grey');
     })
     
