@@ -13,14 +13,19 @@ criarTarefaButton.addEventListener('click', function() {
     // Cria um novo item de lista <li>
     const novaTarefa = document.createElement('li');
     novaTarefa.textContent = textoTarefa;
-    novaTarefa.addEventListener('click', function(){
 
+    novaTarefa.addEventListener('click', function(){
+      // Remove a classe de todos <li> existente.
       document.querySelectorAll('li').forEach(li => {
         li.classList.remove('bg-color-grey');
       });
+      // Adiciona/remove a classe no item que foi clicado. 
+      novaTarefa.classList.add('bg-color-grey');
+    });
 
-      novaTarefa.classList.toggle('bg-color-grey');
-    })
+    novaTarefa.addEventListener('dblclick', function(){
+      novaTarefa.classList.toggle('completed');
+    });
     
     // Adiciona o novo item ao final da lista
     listaTarefas.appendChild(novaTarefa);
