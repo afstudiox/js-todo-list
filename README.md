@@ -28,7 +28,7 @@ Será necessário demonstrar conhecimento em estruturação semântica, estiliza
 
 - [x] - Adicione um botão com id="criar-tarefa" e, ao clicar nesse botão, um novo item deverá ser criado ao final da lista e o texto do input deve ser limpo
 
-- [ ] - Ordene os itens da lista de tarefas por ordem de criação
+- [x] - Ordene os itens da lista de tarefas por ordem de criação
 
 - [ ] - Clicar em um item da lista deve alterar a cor de fundo do item para cinza rgb(128,128,128)
 
