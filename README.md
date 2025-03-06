@@ -36,7 +36,7 @@ Será necessário demonstrar conhecimento em estruturação semântica, estiliza
 
 - [x] - Clicar duas vezes em um item, faz com que ele seja riscado, indicando que foi completo. Deve ser possível desfazer essa ação clicando novamente duas vezes no item
 
-- [ ] - Adicione um botão com id="apaga-tudo" que quando clicado deve apagar todos os itens da lista
+- [x] - Adicione um botão com id="apaga-tudo" que quando clicado deve apagar todos os itens da lista
 
 - [ ] - Adicione um botão com id="remover-finalizados" que quando clicado remove somente os elementos finalizados da sua lista
 

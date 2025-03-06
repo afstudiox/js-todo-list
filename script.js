@@ -2,7 +2,7 @@
 const criarTarefaButton = document.getElementById('criar-tarefa');
 const textoTarefaInput = document.getElementById('texto-tarefa');
 const listaTarefas = document.getElementById('lista-tarefas');
-
+const apagarTarefaButton = document.getElementById('apaga-tudo');
 
 // Adiciona o evento de clique no botão
 criarTarefaButton.addEventListener('click', function() {
@@ -34,4 +34,9 @@ criarTarefaButton.addEventListener('click', function() {
     // Limpa o campo de input
     textoTarefaInput.value = "";
   }
+});
+
+// Adiciona o evento de clique no botão
+apagarTarefaButton.addEventListener('click', function(){
+  listaTarefas.innerHTML = '';
 });
