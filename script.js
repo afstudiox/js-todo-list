@@ -3,6 +3,7 @@ const criarTarefaButton = document.getElementById('criar-tarefa');
 const textoTarefaInput = document.getElementById('texto-tarefa');
 const listaTarefas = document.getElementById('lista-tarefas');
 const apagarTarefaButton = document.getElementById('apaga-tudo');
+const removerFinalizadosButton = document.getElementById('remover-finalizados');
 
 // Adiciona o evento de clique no botão
 criarTarefaButton.addEventListener('click', function() {
@@ -39,4 +40,9 @@ criarTarefaButton.addEventListener('click', function() {
 // Adiciona o evento de clique no botão
 apagarTarefaButton.addEventListener('click', function(){
   listaTarefas.innerHTML = '';
+});
+
+// Adiciona o evento de clique no botão
+removerFinalizadosButton.addEventListener('click', function(){
+  document.querySelectorAll('.completed').forEach(tarefa => tarefa.remove());
 });

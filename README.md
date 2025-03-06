@@ -38,7 +38,7 @@ Será necessário demonstrar conhecimento em estruturação semântica, estiliza
 
 - [x] - Adicione um botão com id="apaga-tudo" que quando clicado deve apagar todos os itens da lista
 
-- [ ] - Adicione um botão com id="remover-finalizados" que quando clicado remove somente os elementos finalizados da sua lista
+- [x] - Adicione um botão com id="remover-finalizados" que quando clicado remove somente os elementos finalizados da sua lista
 
 - [ ] - Adicione um botão com id="salvar-tarefas" que salve o conteúdo da lista. Se você fechar e reabrir a página, a lista deve continuar no estado em que estava
 
