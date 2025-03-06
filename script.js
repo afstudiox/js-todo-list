@@ -1,48 +1,77 @@
 // Seleciona os elementos necessários
-const criarTarefaButton = document.getElementById('criar-tarefa');
-const textoTarefaInput = document.getElementById('texto-tarefa');
-const listaTarefas = document.getElementById('lista-tarefas');
-const apagarTarefaButton = document.getElementById('apaga-tudo');
-const removerFinalizadosButton = document.getElementById('remover-finalizados');
+const inputTask = document.getElementById('texto-tarefa');
+const listTasks = document.getElementById('lista-tarefas');
+const btnCreateTask = document.getElementById('criar-tarefa');
+const btnDeleteTasks = document.getElementById('apaga-tudo');
+const btnRemoveCompleted = document.getElementById('remover-finalizados');
+const btnSaveTasks = document.getElementById('salvar-tarefas');
 
-// Adiciona o evento de clique no botão
-criarTarefaButton.addEventListener('click', function() {
-  // Verifica se o campo de input não está vazio
-  const textoTarefa = textoTarefaInput.value.trim();
+// CREATE TASK FUNCTION
+function createTask(text, completed=false){
+  const newTask = document.createElement('li');
+  newTask.textContent = text;
 
-  if (textoTarefa !== "") {
-    // Cria um novo item de lista <li>
-    const novaTarefa = document.createElement('li');
-    novaTarefa.textContent = textoTarefa;
+  if (completed){
+    newTask.classList.add('completed');
+  }
 
-    novaTarefa.addEventListener('click', function(){
-      // Remove a classe de todos <li> existente.
-      document.querySelectorAll('li').forEach(li => {
-        li.classList.remove('bg-color-grey');
-      });
-      // Adiciona/remove a classe no item que foi clicado. 
-      novaTarefa.classList.add('bg-color-grey');
+  newTask.addEventListener('click', function (){
+    document.querySelectorAll('li').forEach(li => li.classList.remove('bg-color-grey'));
+    newTask.classList.add('bg-color-grey');
+  });
+
+  newTask.addEventListener('dblclick', function(){
+    newTask.classList.toggle('completed');
+  });
+
+  listTasks.appendChild(newTask);  
+};
+
+// SAVE TASKS FUNCTION
+function saveTasks(){
+  const tasks = [];
+  document.querySelectorAll('li').forEach(task => {
+    tasks.push({
+      text: task.textContent,
+      completed: task.classList.contains('completed')
     });
+  });
+  localStorage.setItem('tasks', JSON.stringify(tasks));
+};
 
-    novaTarefa.addEventListener('dblclick', function(){
-      novaTarefa.classList.toggle('completed');
+// LOAD TASKS FUNCTION
+function loadTasks(){
+  const savedTasks = localStorage.getItem('tasks');
+  if (savedTasks){
+    JSON.parse(savedTasks).forEach(task => {
+      createTask(task.text, task.completed);
     });
-    
-    // Adiciona o novo item ao final da lista
-    listaTarefas.appendChild(novaTarefa);
+  }
+};
 
-    
-    // Limpa o campo de input
-    textoTarefaInput.value = "";
+// CLICK CREATE TASK
+btnCreateTask.addEventListener('click', function() {
+  const textTask = inputTask.value.trim();
+  if (textTask !== ""){
+    createTask(textTask);
+    inputTask.value ="";
   }
 });
 
-// Adiciona o evento de clique no botão
-apagarTarefaButton.addEventListener('click', function(){
-  listaTarefas.innerHTML = '';
+// CLICK DELETE TASKS
+btnDeleteTasks.addEventListener('click', function(){
+  listTasks.innerHTML = "";
+  localStorage.removeItem('tasks');
 });
 
-// Adiciona o evento de clique no botão
-removerFinalizadosButton.addEventListener('click', function(){
-  document.querySelectorAll('.completed').forEach(tarefa => tarefa.remove());
+// CLICK REMOVE COMPLETED
+btnRemoveCompleted.addEventListener('click', function(){
+  document.querySelectorAll('.completed').forEach(task => task.remove());
+  saveTasks();
 });
+
+// CLICKS SAVE TASKS
+btnSaveTasks.addEventListener('click', saveTasks);
+
+// WINDOW LOAD
+window.addEventListener('load', loadTasks);
