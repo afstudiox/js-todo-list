@@ -17,6 +17,11 @@ function selectTask(taskElement){
   currentTask = taskElement;
 };
 
+// FUNCTION TOGGLE COMPLETED 
+function toggleCompleted(taskElement){
+  taskElement.classList.toggle('completed');
+};
+
 // MOVE UP FUNCTION
 function moveUp(){
   if (currentTask){
@@ -48,7 +53,7 @@ function createTask(text, completed=false){
 
   newTask.addEventListener('click', () => selectTask(newTask));
   
-  newTask.addEventListener('dblclick', () => newTask.classList.toggle('completed'));
+  newTask.addEventListener('dblclick', () => toggleCompleted(newTask));
 
   listTasks.appendChild(newTask);  
 };
