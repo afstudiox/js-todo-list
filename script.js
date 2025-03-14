@@ -7,6 +7,7 @@ const btnRemoveCompleted = document.getElementById('remover-finalizados');
 const btnSaveTasks = document.getElementById('salvar-tarefas');
 const btnMoveUp = document.getElementById('mover-acima');
 const btnMoveDown = document.getElementById('mover-abaixo');
+const btnRemoveSelected = document.getElementById('remover-selecionado')
 
 let currentTask = null;
 
@@ -20,6 +21,22 @@ function selectTask(taskElement){
 // FUNCTION TOGGLE COMPLETED 
 function toggleCompleted(taskElement){
   taskElement.classList.toggle('completed');
+};
+
+// CREATE TASK FUNCTION
+function createTask(text, completed=false){
+  const newTask = document.createElement('li');
+  newTask.textContent = text;
+
+  if (completed){
+    newTask.classList.add('completed');
+  }
+
+  newTask.addEventListener('click', () => selectTask(newTask));
+  
+  newTask.addEventListener('dblclick', () => toggleCompleted(newTask));
+
+  listTasks.appendChild(newTask);  
 };
 
 // MOVE UP FUNCTION
@@ -40,22 +57,6 @@ function moveDown(){
       currentTask.parentNode.insertBefore(nextTask, currentTask);
     }
   }
-};
-
-// CREATE TASK FUNCTION
-function createTask(text, completed=false){
-  const newTask = document.createElement('li');
-  newTask.textContent = text;
-
-  if (completed){
-    newTask.classList.add('completed');
-  }
-
-  newTask.addEventListener('click', () => selectTask(newTask));
-  
-  newTask.addEventListener('dblclick', () => toggleCompleted(newTask));
-
-  listTasks.appendChild(newTask);  
 };
 
 // SAVE TASKS FUNCTION
@@ -100,6 +101,13 @@ btnRemoveCompleted.addEventListener('click', function(){
   document.querySelectorAll('.completed').forEach(task => task.remove());
   saveTasks();
 });
+
+// CLICK REMOVE SELECTED
+btnRemoveSelected.addEventListener('click', function(){
+  if (currentTask){
+    currentTask.remove();
+  }
+})
 
 // CLICKS SAVE TASKS
 btnSaveTasks.addEventListener('click', saveTasks);

@@ -44,7 +44,7 @@ Será necessário demonstrar conhecimento em estruturação semântica, estiliza
 
 - [x] - Adicione dois botões, um com id="mover-cima" e outro com id="mover-baixo", que permitam mover o item selecionado para cima ou para baixo na lista de tarefas
 
-- [ ] - Adicione um botão com id="remover-selecionado" que, quando clicado, remove o item selecionado
+- [x] - Adicione um botão com id="remover-selecionado" que, quando clicado, remove o item selecionado
 
 
 **Nota:** A estrutura deste repositório foi desenvolvida pela [Trybe](https://www.betrybe.com/).
